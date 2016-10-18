@@ -96,9 +96,9 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
       return arrEven;
     }
 
-    var array = [evenFinder(numbersArray.slice()), oddFinder(numbersArray.slice())];
+    var newArray = [evenFinder(numbersArray.slice()), oddFinder(numbersArray.slice())];
 
-    return array;
+    return newArray;
   }
 
 //Next Problem
@@ -115,7 +115,9 @@ var getRandomArbitrary = function() {
   //Code Here
 
   //Code Here
-
+function finder(arr){
+  return arr.includes(getRandomArbitrary());
+}
 
 //Next problem
 
@@ -125,7 +127,9 @@ var str = 'this is my sentence';
 //Write a function called reverse that takes a given str as it's only argument and returns that string after it's been reversed
 
   //Code Here
-
+function reverse(str){
+  return str.split("").reverse().join("");
+}
 
 //Next Problem
 
@@ -147,7 +151,22 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 */
 
   //Code Here
-
+function removeItem(arr,itemRemove){
+  if (Array.isArray(arr)){
+    arr.splice(arr.indexOf(itemRemove), 1);
+    return arr;
+  } else {
+    return [];
+  }
+}
+function addItem(arr, itemAdd){
+  if (Array.isArray(arr)){
+    arr.push(itemAdd);
+    return arr;
+  } else {
+  return [];
+  }
+}
 //removeItem(myGroceryList, 'chips') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //addItem(myGroceryList, 'Jerky') --> ['pizza', 'hotpockets', 'MtnDew', 'corndogs', 'Jerky'];
 
@@ -160,7 +179,26 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
 //Write a function called maker that creates an array, fills that array with numbers from 1 to 215, then returns the array.
 
   //Code Here
+function maker(){
+  var arr = [];
+  for (var i = 1; i <= 215; i++){
+    arr.push(i);
+  }
+  return arr;
+}
 
+// function maker(start, count) {
+//     if(arguments.length === 1) {
+//         count = start;
+//         start = 0;
+//     }
+//
+//     var arr = [];
+//     for (var i = 0; i < count; i++) {
+//         arr.push(start + i);
+//     }
+//     return arr;
+// }
 
 
 //Next Problem
